@@ -39,7 +39,7 @@ class DriverOptions(object):
         # self.options.add_argument('--start-fullscreen')
         self.options.add_argument('--single-process')
         self.options.add_argument('--disable-dev-shm-usage')
-        self.options.add_argument('--incognito')
+        # self.options.add_argument('--incognito')
         self.options.add_argument('--disable-blink-features=AutomationControlled')
         self.options.add_argument('--disable-blink-features=AutomationControlled')
         self.options.add_experimental_option('useAutomationExtension', False)
@@ -75,6 +75,7 @@ def main():
     driver = webdriver.driver_instance
     try:
         driver.get("https://deriv.com")
+        time.sleep(60)
 
         signal.signal(signal.SIGINT, signal_handler)
 
